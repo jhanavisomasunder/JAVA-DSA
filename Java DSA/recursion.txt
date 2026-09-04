@@ -1,0 +1,33 @@
+RECURSION : 
+loops are there many then TC: is o(n**n)
+calling the fun again and again
+Base case:where i should stop
+recursive case: how i have to solve or make it easy
+call stack: the stack frame stores----fun para.,local variable'return address(where to go back after the fin finishes)
+REcursion for factorial no.
+class Rec{
+    static int fact(int n){ // void means no return statement // after sttic we should give return type like how we want the o/p to be returned
+        if(n<=1){ //5 is not < 1 so this case skips goes to recursive case and does that
+            return; // Base case
+        }
+        return n*fact(n-1); //recursive case  //return gonna save the o/p for future , wheras print will just print the o/p
+//5*4!,4*3!
+//it reaches 1 at last it performs the base case---- 1 will be returned to fact(2)---2*1!
+// and moves backward like 2*1,3*2*1 and so on.
+    }
+    psvm(s[]a){
+        int n=5;
+        fact(n)
+        sop(result);
+    }
+}
+tree recursion:
+BACKTRACKING:
+choose----->explore------->undo----->another choice
+               |             |
+               ^             |
+               |_____________|
+
+SORTING AND SERACHING
+SERACHING: LINEAR AND BINARY
+SORTING: BUBBLE SORT,SELECTION,INSERTION,MERGE SORT,QUICK SORT

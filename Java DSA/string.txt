@@ -1,0 +1,131 @@
+there are 2 ways to declare a string they are
+1. string literal
+Type variablename : value;
+         String name:"JAM";  
+2. by new keyword -like object- new is used to create space
+ string name = new string("value");
+string name = new string("jam");
+ 
+string is immutable we cant update directly.
+when ever we create a string a new object is created.
+* if -----String A ="PASS53";
+        String B ="PASS53";   then in the memo. allocation the value pass53 which is the same 
+        value instead of creating multiple object ,,, they create a single object and the variables are assigned to the same object
+         PASS53-----A
+            |-------B
+* String A ="PASS53";
+String B ="PASS53;
+IF A.concat="1234";----this will not update the value for A as that single object is used by B 
+as it will only update for A where B cant use(AS THEY BOTH SHARE SAME OBJ CONTRADICTS THE B).In same object update cant happen
+* A= A.concat="1234"; NOW IT WILL CREATE A SEPERATE OBJECT and then it gets updated.
+          PASS53----B
+          PASS531234------A (2 SEPERATE OBJECTS)
+
+
+String A:"JAM";( in this case for jam becomes a single obj wher BOTH A AND B IS ASSIGNED )
+String B:"JAM";(a==b   --> TRUE(AS  IT IS REFERNCE SAME OBJ) )(==checks refernces)
+( but equals() checks the content so for both the cases it will be TRUE)
+suppose if:
+      string a = new string("app");(a==b --> false(coz it has difent obj so refernces changes so false))
+       string b  = new string("app"); then two differnt obj will be created like app will be one obj for a 
+       and app will be other obj for b(coz new keyword is used which will be used to create new space or create a new ogj for the string)
+
+TO TRAVERSE A String
+   String A =" HAVE A GOOD DAY";
+   for(INT I=0;I<A.length();i++){
+    sop(a.charAt[i]);// print each char 1 by 1
+   }
+char at index i.--->a.charAt[i]
+   char at index 3.--->a.charAt[3]----> returns the char at specified position
+   for string we use charAt[i] not a[i](which will be used in array)  
+
+    -----------------------------------------------------------------------------
+
+                                 STRING METHODS
+
+1. tolowerCase()
+2. toupperCase()
+3. isempty()
+4. is digit()
+5. concat()
+6. replace()
+7. charAt()
+8. equals()
+9. length()
+10. indexOf()
+11. substring()-------HELLO
+      SUBSTRINGS ARE --- H,e ,l,l,o,he,el,ll,lo..........,hell,ello,hello
+      s="hello";
+      sop(S.substring(2,5));--->    2 will be incuded and 5  will be not included between letters will be there so o/p llo
+
+
+TO PRINT THE SUBSTRINGS
+   for(int i=0;i<A.length();i++){
+    for(int j=i+1;j<A.length();i++){
+        sop(a.charAt[i],a.charAt[j])}}
+        -------------------------------------------------------------------
+                  BIT MANIPULATION
+anything to binary---8421
+bin to decimal-------------2**3,2**2,2**1,2**0
+binary no.: 1 0 1 1
+8 4 2 1
+value:1*8+0*4+1*2+1*1= 11
+  
+  4 types of bit MANIPULATION
+  1.get : used to read to bit
+  2.set : used to set the bit
+  3.clear: clear all 
+  4.toggle: switches 0 to 1 and 1 to 0
+  -----------------------------------------------------------------------------
+  and(&) 1 1 -> 1
+  or(|) 0 0 ->0
+  XOR(^) 1 1->0        x^x=0 (11^11=0000=0)         
+         0 0->0        x^0=x     *we can rearange nos in xor (2^3^4^4^3^2^1-----we can grp 2to 2 3to 3 and 4 to 4 which will 
+         be 0 and 0^1 is 1 so answer is 1)
+   NOT O->1
+       1->0
+   LEFT SHIFT <<
+    eg: 0101----> left shift by 1 --answer is 1010 (last 0 is removed or shifted to next place)
+         |-------> right shift by 1 --answer is 0010(last 1 is shifted or removed)
+----------------------------------------------------------------------------------
+ bit masking and bit positioning
+ get: 1. 1<<i
+      2. n (either 0 or 1)  
+       <<2 
+       we use and 
+ set: 1.1<<i 
+      2. |   (0 to 1 and 1 to 0)
+      <<1
+      we use or
+
+logic:
+      int n=sc ;
+      i=sc;
+      bitmask=1<<i;
+      sop((bitmask|n));
+
+clear:1. BIT MASK=1<<i i can be anything 
+      2.~(BM)& n 
+      we use xor
+      n=0110  suppose we take 2nd postion i=1 (index)
+      3210
+      0110
+update/toogle :1. 1<<i 
+2. 0-->1  same as set (bitmask|n)
+         1-->0  same as clear ~(BM)& n 
+ LOGIC:
+   int n=0110;
+   int i=2;
+   int result;
+   int bitmask=1<<i;
+   if(bit==0){
+       result=bitmask|n;
+   }
+   else{
+       result= ~(BM)&n;
+   }
+   sout("result"+result);
+   write a pro to toggle/update a bit if position (user i/p) of numbers
+
+
+
