@@ -1,0 +1,20 @@
+normal recurssion program:
+   {
+    {
+        if(n==1)
+        return 1;
+        if(n==2)
+        return 2;
+        return way(n-1)+way(n-2);
+    }
+   }
+
+
+
+DP HAS 3 THINGS STATE ,TRANSITION AND Base CASE
+MEMOIZATION(TOP TO BOTTOM) AND TABULATION(BOTTTOM TO UP)
+
+           KNAPSACK
+           SUBSET SUM
+           COIN CHANGE
+           

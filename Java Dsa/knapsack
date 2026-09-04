@@ -1,0 +1,28 @@
+public class Knapsack {
+    static int knapsack(int[] weight, int[] value, int capacity) {
+        int n = weight.length;
+
+        // dp[i][w] represents the maximum value with first i items and capacity w
+        int[][] dp = new int[n + 1][capacity + 1];
+
+        for (int i = 1; i <= n; i++) {
+            for (int w = 0; w <= capacity; w++) {
+                if (weight[i - 1] <= w) {
+                    int dontTake = dp[i - 1][w];
+                    int take = value[i - 1] + dp[i - 1][w - weight[i - 1]];
+                    dp[i][w] = Math.max(take, dontTake);
+                } else {
+                    dp[i][w] = dp[i - 1][w];
+                }
+            }
+        }
+        return dp[n][capacity];
+    }
+
+    public static void main(String[] args) {
+        int[] weight = {1, 2, 3, 4};
+        int[] value = {10, 15, 40, 50};
+        int capacity = 6;
+        System.out.println("Maximum value: " + knapsack(weight, value, capacity));
+    }
+}

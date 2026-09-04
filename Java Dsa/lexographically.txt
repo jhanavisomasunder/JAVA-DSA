@@ -1,0 +1,10 @@
+lexographically---dic/alpha based-----substring
+welcome to java
+k=3
+wel elc,lco,com,ome,met,eto,toj,jav,ava
+lexographically---finding the smallest and the largetst substring a to z
+smallest:
+largest:
+ apple
+ ash
+ ankle  all r starting with a so check the second letter so here n is smallestso 1st smallest sub string is ankle and p 2nd so apple then ash

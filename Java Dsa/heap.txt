@@ -1,0 +1,37 @@
+ HEAP : IS A COMPLETE BINARY TREE DATA STRUCTURE
+      : FOLLOWS PARENT AND CHILD PPTS
+     34,22,100,10,50,20,3
+     O(n)
+
+        10
+      /    \
+      20   30       //elements are not sorted
+      /\    / \
+    40 50  60 70
+     types:
+       MIN HEAP :PARENTS<=CHILD
+       MAX HEAP : PARENT>=CHILD
+          HEAP!=BST
+    TO DELETE AN element WE USE POLL() OR delete()
+    shift up or shift down 
+ 
+ top k largest and smallest element
+      
+(10 3 20 8 30 15)
+ IF K=3
+[10]=[10]  1st element
+[3]=[3,10]  2nd element 
+[20]=[20,3,10]  3rd element and the k=3 upto 3 is done from here the heap is filled
+[8]=[8,20,10] {FOR LARGEST element  SMALLEST  element WILL BE REMOVED , vice versa  --here 3 removed}
+[30]=[30,20,10]  {FOR LARGEST element  SMALLEST  element WILL BE REMOVED , vice versa ---here 8 removed}
+[15]=[15,30,20] {FOR LARGEST element  SMALLEST  element WILL BE REMOVED , vice versa here 10 will be removed}
+
+                           TRIE
+    IS USED TO STORES THE WORDS AND STRINGS
+                                   ROOT
+                                   /  \
+                                   c   d
+                                  /     \
+                                  a       O
+                                 / | \    / \
+                                 r n  t   g  l 

@@ -1,0 +1,118 @@
+traversal :
+  preorder,inorder,postorder,levelorder
+
+  Node root=new Node(10);//create a node of a tree root is also a node
+  root.left=new Node(5);//a node is created on left 
+  root.right=new Node(20);//a node is created on right
+  root.left.left = new Node(2);//from the root left and from left only left side a node is created
+  root.left.right = new Node(7);/from root left and from left right side a node is created
+   10  // LEVEL 0
+   / \
+   5  20 //LEVEL 1 
+  / \
+  2  7// LEVEL 2
+  1ST 3 ORDERS FOLLOW RECURSSION
+  1.Pre order: ROOT->LEFT->RIGHT 
+           : 10,5,(5 IS ALSO ROOT FOR 2 AND 7),2,7,20(RIGHT)
+  static void preorder( node root){
+    if(root==null)
+        return;
+        sout(rootdata+"");
+    preorder(root.left);
+    preorder(root.right); 
+  }
+
+  2.Inorder: LEFT->ROOT->RIGHT
+           : 2(L),5(R00T),7(RIGHT),10(ROOT),20(RIGHT)
+           : INORDER WILL ALWAYS GIVE SORTED ARRAY
+    
+    static void inorder( node root){
+    if(root==null)
+        return;
+    inorder(root.left);
+    sout(rootdata+"");
+    inorder(root.right); 
+  }
+
+3. Post order: Left->Right->root
+             : 2,7,5,20,10
+        postorder(root.left);
+        postorder(root.right);
+        sop(rootdata+"");
+
+4.LEVEL ORDER: FOLLOW QUEUE(COZ OF PRIORITY)
+             : 10,5,20,2,7(FOLLOW BY LEVEL 0,THE 1 AND 2)
+
+    ITERATIVE RECURSSIVE traversal
+    Path sum problem
+   
+                        BINARY SEARCH TREE(BST)
+                        15,20,2,3,7,8,9,11,30
+                                   15
+                                /      \
+                                2      20
+                                /\     / \                   
+                                  3   17 30
+                                  /\      /\
+                                    7    25 33
+                                    / \
+                                    5  8
+                                        \
+                                         9
+                                         \
+                                         11
+                                         / \
+                                         10 14
+
+serarching:
+static boolean Search(node root,int key){
+  if(root==null)
+  return false;
+  if(root)
+}
+delete
+   
+Tree
+ class Node{
+    int data;
+    Node Left;
+    Node Right;
+    Node(int data){
+        this.data=data;
+        Left=null;
+        right=null;
+    }
+    }
+ 
+
+ LCA(LOWEST COMMON ANCESTOR)
+ LCA usually refers to Lowest Common Ancestor in computer science, especially in tree data structures. It’s a classic problem: given two nodes in a tree, the LCA is the deepest node that is an ancestor of both.
+
+Example
+Suppose you have a binary tree:
+
+Code
+        1
+       / \
+      2   3
+     / \
+    4   5
+LCA(4, 5) = 2
+
+LCA(4, 3) = 1
+
+                           AVL TREE:SELF BALANCED TREE
+HEIGHT OF LEFT IS EQUAL TO HEIGHT OF RIGHT
+ 10,20,30
+       10
+         \
+         20         // THIS IS AVL COZ IT IS UNBALANCED SO TURN THE ROOT WE GET LIKE THIS
+           \                              20
+            30                            / \
+                                        10   30 // SO THIS IS NOW AVL
+RIGHT AND LEFT ROTATION
+  10                           10                          20
+   \                            \                         /  \
+   30      ------------>         20    ------------->    10   30
+   /                               \
+   20                               30

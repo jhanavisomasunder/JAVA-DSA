@@ -1,0 +1,47 @@
+tree is also a special type of graph
+types of graphs:
+1. unidirected graphs: A<->B  (AB OR BA ALSO POSSIBLE)
+2. directed graph : A->B (AB POSSIBLE BUT BA NOT POSSIBLE)
+        Graph[a].add[b];
+3.weighted graph:
+      10
+     A->B
+4. UNWEIGHTED
+5. CYCLIC A->B->C->D->A
+ 6.ACYCLIC :DOES NOT ENTER ANY CYCLE A->B->C->D->E
+ 7 CONNECTED 
+ 8.DISCONNTECTED 
+
+
+TO REPRESENT THE GRAPH IN PROGRAM OR COMPUTER WE USE:
+1.adj matrix
+2.adg list: it is udes to store elemnts in graph in COMPUTER
+                ADJ LIST
+          0               0=[1,2] // CONNECETION OF 0 WITH 1 AND 2
+         / \              1=[3,4,0]
+         1  2             2=[5,0]
+        / \  \           3=[1]
+        3  4  5          4=[1]      5=[2]
+      Arraylist<integer>graph = new arraylist[3];
+      for(int i=0;i<3;i++){
+      graph[i]= new arraylist<>(2);
+      }
+      graph[0].add[1];
+      graph[1].add[0];
+      graph[0].add[2];
+      graph[2].add[0];
+ 
+ BFS AND DFS(dfs follows stack)
+
+recurssion internallly stack is used
+ BFS: traverse level wise 
+ 0    level 0   level 0,1,2,3 (based on priority so it follow q datastructure)
+ /\
+ 1 2    level 1     bfs: 0,1,2,3,4,5
+ /\  \
+ 3 4  5   level 2
+
+
+                            BIPARTILE GRAPH
+
+
